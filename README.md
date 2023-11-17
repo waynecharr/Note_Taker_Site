@@ -6,3 +6,4 @@
 - "Made some additional updates to the server.js file." 
 - "Added the get route for the api-routes" 
 - "Edited the get route and updated the post route" 
+- "Updated the route for html-routes" 
