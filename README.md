@@ -7,3 +7,4 @@
 - "Added the get route for the api-routes" 
 - "Edited the get route and updated the post route" 
 - "Updated the route for html-routes" 
+- "Updated the server.js for the middleware and fixed issues with the html-routes.js" 

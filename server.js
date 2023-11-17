@@ -1,8 +1,16 @@
-const express = require('express')
-const htmlRoutes = routes*('./routes/html-routes')
-const apiRoutes = routes*('./routes/api-routes')
+const express = require('express');
 const PORT = process.env.PORT || 3000;
 const app = express();
+
+const htmlRoutes = require('./routes/html-routes');
+const apiRoutes = require('./routes/api-routes');
+
+app.use(express.static('public'));
+
+app.use(express.json());
+
+app.use(htmlRoutes);
+app.use(apiRoutes);
 
 app.listen(PORT, function(){
     console.log('Server is listening on: http://localhost: ' + PORT)
