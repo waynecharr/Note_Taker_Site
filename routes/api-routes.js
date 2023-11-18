@@ -42,7 +42,7 @@ router.post('api/notes', (req, res) => {
         }
     
         // Adds a new note to the array
-        notes.push(note);
+        notesArray.push(note);
     
         // Takes the array and updates the file. 
         fs.writeFile('../db/notes.json', JSON.stringify(notesArray, null, 2), (writeErr) => {
