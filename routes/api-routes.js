@@ -45,7 +45,7 @@ router.post('/api/notes', (req, res) => {
         notesArray.push(note);
     
         // Takes the array and updates the file. 
-        fs.writeFile('./db/notes.json', JSON.stringify(notesArray, null, 2), (writeErr) => {
+        fs.writeFile('./db/db.json', JSON.stringify(notesArray, null, 2), (writeErr) => {
           if (writeErr) {
             console.error(writeErr);
             res.status(500).json({ error: 'Error writing to file' });
