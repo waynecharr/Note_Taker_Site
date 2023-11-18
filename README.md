@@ -8,3 +8,4 @@
 - "Edited the get route and updated the post route" 
 - "Updated the route for html-routes" 
 - "Updated the server.js for the middleware and fixed issues with the html-routes.js" 
+- "Updated potential issues with the html-routes not pulling in the notes redirection." 
