@@ -28,7 +28,7 @@ router.post('/api/notes', (req, res) => {
           return;
         }
 
-        const notesArray = [];
+        let notesArray = [];
 
         // Looks to see if the data is available
         if (data) {
