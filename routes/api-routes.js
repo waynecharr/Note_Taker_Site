@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
+
 // GET route reading the db.json file.
 router.get('api/notes', (req, res) =>
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
@@ -63,4 +64,4 @@ router.post('api/notes', (req, res) => {
 
 
   
-  module.exports = router;
+module.exports = router;
