@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require('uuid');
 
 // GET route reading the db.json file.
 router.get('api/notes', (req, res) =>
-  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
+  readFromFile('../db/db.json').then((data) => res.json(JSON.parse(data)))
 );
 
 // POST routes for submitting a new note
@@ -21,7 +21,7 @@ router.post('api/notes', (req, res) => {
       };
       
       // Reads the file
-      fs.readFile('./db/db.json', 'utf-8', (err, data) => {
+      fs.readFile('../db/db.json', 'utf-8', (err, data) => {
         if (err) {
           console.error(err);
           res.status(500).json({ error: 'Internal Server Error' });
@@ -45,7 +45,7 @@ router.post('api/notes', (req, res) => {
         notes.push(note);
     
         // Takes the array and updates the file. 
-        fs.writeFile('./db/notes.json', JSON.stringify(notesArray, null, 2), (writeErr) => {
+        fs.writeFile('../db/notes.json', JSON.stringify(notesArray, null, 2), (writeErr) => {
           if (writeErr) {
             console.error(writeErr);
             res.status(500).json({ error: 'Error writing to file' });
