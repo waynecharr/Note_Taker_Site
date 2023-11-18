@@ -11,4 +11,5 @@
 - "Updated potential issues with the html-routes not pulling in the notes redirection." 
 - "added app.use(express.urlencoded({ extended: true })) to the server.js file"
 - "made some adjustments to the html-routes that should hopefully resolve an error with the posting of notes"
+- "fixed small issue with /api/routes written as api/routes:"
 

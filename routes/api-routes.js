@@ -5,12 +5,12 @@ const { v4: uuidv4 } = require('uuid');
 
 
 // GET route reading the db.json file.
-router.get('api/notes', (req, res) =>
+router.get('/api/notes', (req, res) =>
   readFromFile('../db/db.json').then((data) => res.json(JSON.parse(data)))
 );
 
 // POST routes for submitting a new note
-router.post('api/notes', (req, res) => {
+router.post('/api/notes', (req, res) => {
     const { title, text } = req.body;
   
   
